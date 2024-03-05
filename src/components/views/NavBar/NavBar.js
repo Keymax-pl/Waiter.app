@@ -4,7 +4,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 
 const NavBar = () => {
     return (
-        <Navbar bg="primary" variant="dark" expand="lg" className="mt-4 mb-4 rounded">
+        <Navbar bg="primary" variant="dark" expand="lg" className="mb-5 mt-5 rounded">
             <Navbar.Brand as={NavLink} to="/" className="text-light" style={{ fontSize: '1.2rem', marginLeft: '10px' }}>Waiter.app</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

@@ -35,16 +35,16 @@
       "name": "Free"
     },
     {
-      "id": "reserved",
-      "name": "Reserved"
+      "id": "cleaning",
+      "name": "Cleaning"
     },
     {
       "id": "busy",
       "name": "Busy"
     },
     {
-      "id": "cleaning",
-      "name": "Cleaning"
+      "id": "reserved",
+      "name": "Reserved"
     }
   ]
 }

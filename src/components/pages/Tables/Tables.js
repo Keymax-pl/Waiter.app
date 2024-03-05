@@ -1,25 +1,28 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getTableById } from '../../../redux/tablesReducer';
+import { Form, Col, Row, Button, InputGroup } from 'react-bootstrap';
 
 const Tables = ()=> {
 
+  const dispatch = useDispatch();
+
+  const tableId = useSelector(state => getTableById(state, tableId));
+
   return (
-    <div className="row">
-      <div>
-        <h2>Table 1</h2>
-      </div>
-      <div>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li> 
-        </ul>
-        <div>
-          <button>
-            Update
-          </button>
-        </div>
-      </div>
-    </div>
+    <Form>
+      <h1>Table{tableId.id}</h1>
+      <Row>
+        <Col>Status:</Col>
+      </Row>
+      <Row>
+        <Col>People:</Col>
+      </Row>
+      <Row>
+        <Col>Bill:</Col>
+      </Row>
+      <Button type="submit">Update</Button>
+    </Form>
   );
 };
 
