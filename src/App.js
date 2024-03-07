@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from 'react-bootstrap';
 import { Routes, Route } from 'react-router-dom';
 import { fetchTables } from './redux/tablesReducer.js';
+import { fetchStats } from './redux/StatusReducer.js';
 import Home from './components/pages/Home/Home.js';
 import Tables from './components/pages/Tables/Tables.js';
 import NotFound from './components/pages/NotFound/NotFound.js';
@@ -15,7 +16,8 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => dispatch(fetchTables()), [dispatch]);
-
+  useEffect(() => dispatch(fetchStats()), [dispatch]);
+  
   return (
     <Container>
       <Header />

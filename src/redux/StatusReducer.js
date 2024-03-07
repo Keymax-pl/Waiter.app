@@ -1,3 +1,5 @@
+import { API_URL } from "../config";
+
 // Selectors
 export const getStats = ({ status }) => status;
 
@@ -6,11 +8,11 @@ const createActionName = actionName => `app/tables/${actionName}`;
 const TABLES_STATS = createActionName('TABLES_STATS');
 
 // Actions creators
-export const tablesStats = payload => ({ type: 'TABLES_STATS', payload });
+export const tablesStats = payload => ({ type: TABLES_STATS , payload });
 
 export const fetchStats = () => {
   return (dispatch) => {
-    fetch('http://localhost:3131/status')
+    fetch(API_URL + "/status")
       .then(res => res.json())
       .then(status => dispatch(tablesStats(status)));
   };
